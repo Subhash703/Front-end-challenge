@@ -1,0 +1,153 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
+:root{
+  --mainColor:#511f50;
+  --starColor:#f29736;
+  --secondColor:#f7f2f8;
+  --bgColor:#ffffff;
+}
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+body{
+  display:flex;
+  padding:1rem;
+  justify-items: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+    margin: 0 auto;
+}
+.header__text{
+  margin:3em auto;
+  text-align:center;
+}
+.header__text h1{
+  font-size:2.6em;
+  color:var(--mainColor);
+  line-height:1em;
+  margin:2rem 0;
+}
+.header__text p{
+  font-size:1.2rem;
+  color:rgba(0,0,0,0.5);
+  line-height:1.8rem;
+}
+
+.rating{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  margin:1.5rem auto;
+  background:var(--secondColor);
+  padding:.7rem;
+  border-radius:8px;
+}
+.stars{
+  margin:0rem auto;
+  color:var(--starColor);
+}
+.rating p{
+  margin:0.2rem auto;
+  color:var(--mainColor);
+  font-weight:800;
+}
+
+.cards{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+/*   height:100%; */
+}
+.card{
+  padding:1.6rem 1rem;
+  background-color:var(--mainColor);
+  margin-top:1rem;
+  border-radius:10px;
+  box-shadow:0px 10px 10px rgba(255,255,255,0.900);
+}
+.card .profile{
+  display:flex;
+  align-items:center;
+  margin-bottom:1rem;
+  
+}
+
+img{
+  height:50px;
+  object-fit:cover;
+  border-radius:50%;
+  margin-right:2rem;
+}
+small{
+  color:var(--starColor);
+  font-size:12px;
+  letter-spacing:1px;
+}
+.user p{
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
+}
+.profile__description{
+  color:#fff;
+  padding:1rem 0.2rem;
+}
+blockquotes{
+  font-size:1rem;
+  line-height:1.6rem;
+}
+
+@media (min-width:1020px){
+  .container{
+    max-width:1240px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .header{
+    width: 100%;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .header__text{
+    margin: 0;
+    text-align:left;
+    flex:.6;
+  } 
+  .ratings{
+/*     flex:1; */
+    flex-direction:column;
+  }
+  .rating{
+    width:400px;
+  }
+  .rating:nth-of-type(1){
+    margin-left:0;
+  }
+  .rating:nth-of-type(2){
+    margin-left:5em;
+  }
+  .rating:nth-of-type(3){
+    margin-left:10em;
+  }
+  .cards{
+    flex-direction:row;
+    height:400px;
+  }
+  .card{
+    margin:1rem;
+  }
+  .card:nth-of-type(2){
+    margin-top:4em;
+  }
+  .card:nth-of-type(3){
+    margin-top:8em;
+  }
+}
